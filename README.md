@@ -1,37 +1,25 @@
-## Julia in Memphis/Tennessee
-
-You can use the [editor on GitHub](https://github.com/congUoM/JuliaMemphis/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Why Julia?
+[Julia is fast!](https://julialang.org/benchmarks/)  
+[Julia solves two-language problem](https://www.nature.com/articles/d41586-019-02310-3)
+(you don't have to make prototype in Matlab/Python/... and then re-code in C/C++)  
+[Julia metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/) is cool. For example, the following Julia codes (natural and concise) solve first-order differential equation:
+```julia
+  using Modia
+  @model FirstOrder begin
+     x = Variable(start=1)   # start means x(0)
+     T = Parameter(0.5)      # Time constant
+     u = 2.0                 # Same as Parameter(2.0)
+  @equations begin
+     T*der(x) + x = u        # der() means time derivative
+     end
+  end
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Julia in Tennessee
+### Memphis
+[TODO]
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/congUoM/JuliaMemphis/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## General julia
+[Resources on learning Julia](https://julialang.org/learning/)  
+[Julia main website](https://julialang.org/)  
+[Julia forum](https://discourse.julialang.org/)  
